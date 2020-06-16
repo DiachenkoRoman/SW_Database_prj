@@ -1,0 +1,200 @@
+.wrap {
+  font-family: "Poppins", "Arial", sans-serif;
+  width: 100vw;
+  background-color: black;
+}
+@keyframes fade {
+  0% {
+    filter: brightness(0);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+.hide {
+  display: none;
+}
+.fab:hover {
+  filter: brightness(100%);
+  transition-duration: 0.5s;
+  transform: scale(1.2);
+}
+[data-tooltip] {
+  display: block;
+  position: relative;
+}
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  width: 15vw;
+  height: 20vh;
+  left: 50%;
+  margin-left: -7vw;
+  top: 0;
+  background: black;
+  color: white;
+  padding: 5px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  opacity: 0;
+  transition: 1s;
+  z-index: 1;
+}
+[data-tooltip]:hover::after {
+  opacity: 1;
+  top: 20px;
+}
+.fab {
+  filter: brightness(30%);
+  width: 33%;
+  transition-duration: 0.5s;
+  font-size: 25vw;
+  color: #00f7ff;
+}
+.fab.fa-sith {
+  color: crimson;
+}
+.sides {
+  margin-top: 10%;
+  text-align: center;
+}
+.chooseBanner {
+  margin-bottom: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Istok Web", sans-serif;
+  color: #ffffff;
+}
+.sidechar {
+  animation-name: fade;
+  animation-duration: 1s;
+  width: 20vw;
+  height: 30vw;
+}
+.secSis {
+  float: right;
+}
+.main {
+  box-sizing: border-box;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+.main__nav {
+  list-style: none;
+  margin: 0;
+  padding-top: 30px;
+  text-transform: uppercase;
+  font-family: "Istok Web", sans-serif;
+  font-weight: bold;
+}
+.main__nav_item {
+  display: inline;
+  margin-right: 25px;
+  color: #ffffff;
+  transition-duration: 0.5s;
+}
+.main__nav_item:hover {
+  transition-duration: 0.5s;
+  font-size: 1.5em;
+}
+.main__emblem {
+  margin: 0 auto;
+  margin-top: -23px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20%;
+  height: 20%;
+}
+.main__viewer {
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 70px;
+  width: 60vw;
+  height: 50vh;
+  border-radius: 50px;
+  position: relative;
+  text-align: center;
+}
+.main__viewer_list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: stretch;
+  padding: 0 20px;
+}
+.main__viewer_list .list_elem {
+  box-sizing: border-box;
+  margin-top: 5vh;
+  width: 20%;
+  align-self: auto;
+  text-align: center;
+}
+.main__viewer_list .list_elem div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.main__viewer h3 {
+  margin-top: 3vh;
+  text-align: center;
+}
+.main__viewer .fas {
+  position: absolute;
+  font-size: 10vw;
+  top: 50%;
+  margin-top: -5vw;
+}
+.main__viewer .fas:hover {
+  transition-duration: 0.5s;
+  transform: scale(1.2);
+}
+.main__viewer .fa-angle-double-right {
+  right: -15vw;
+}
+.main__viewer .fa-angle-double-left {
+  left: -15vw;
+}
+.jediScheme {
+  background-image: url("../img/jedi_wall.jpg");
+}
+.jediScheme .main__nav_item:hover {
+  color: cyan;
+}
+.jediScheme .main__emblem {
+  background-image: url(../img/Ordre_Jedi.svg);
+}
+.jediScheme .main__viewer {
+  background: linear-gradient(145deg, #00e6e6, #00ffff);
+  box-shadow: 6px 6px 12px #009696, -6px -6px 12px #00ffff;
+}
+.jediScheme .main__viewer_list .list_elem div {
+  background: linear-gradient(145deg, #00ffff, #00e6e6);
+  box-shadow: 9px 9px 20px #007a7a, -9px -9px 20px #00ffff;
+}
+.jediScheme .main__viewer .fas {
+  color: cyan;
+}
+.sithScheme {
+  background-image: url("../img/sith_wall.jpg");
+}
+.sithScheme .main__nav_item:hover {
+  color: crimson;
+}
+.sithScheme .main__emblem {
+  background-image: url(../img/Sith_Eternal_insignia.svg);
+}
+.sithScheme .main__viewer {
+  background: linear-gradient(145deg, #c61236, #eb1540);
+  box-shadow: 6px 6px 12px #820c23, -6px -6px 12px #ff1c55;
+}
+.sithScheme .main__viewer_list .list_elem div {
+  background: linear-gradient(145deg, #eb1540, #c61236);
+  box-shadow: 9px 9px 20px #6a0a1d, -9px -9px 20px #ff1e5b;
+}
+.sithScheme .main__viewer .fas {
+  color: crimson;
+}
